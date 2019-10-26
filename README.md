@@ -11,7 +11,7 @@
 2019
 - [나는 LINE 개발자 입니다](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%EB%82%98%EB%8A%94%20LINE%20%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9E%85%EB%8B%88%EB%8B%A4.md) (2019.10)
 - [만화로 배우는 블록체인](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%EB%A7%8C%ED%99%94%EB%A1%9C%20%EB%B0%B0%EC%9A%B0%EB%8A%94%20%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8.md) (2019.10)
-- [.NET 예제로 배우는 단위 테스트]([개발] .NET 예제로 배우는 단위테스트.md) (2019.09 ~ 2019.10)
+- [.NET 예제로 배우는 단위 테스트](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EA%B0%9C%EB%B0%9C%5D%20.NET%20%EC%98%88%EC%A0%9C%EB%A1%9C%20%EB%B0%B0%EC%9A%B0%EB%8A%94%20%EB%8B%A8%EC%9C%84%ED%85%8C%EC%8A%A4%ED%8A%B8.md) (2019.09 ~ 2019.10)
 - [아주 작은 습관의 힘](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%EC%95%84%EC%A3%BC%20%EC%9E%91%EC%9D%80%20%EC%8A%B5%EA%B4%80%EC%9D%98%20%ED%9E%98.md) (2019.09 ~ 2019.10)
 - 처음 배우는 스프링부트2 (2019.08)
 - 이기적 직원들이 다니는 최고의 회사 (2019.07 ~ 2019.08)
