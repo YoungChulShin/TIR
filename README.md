@@ -9,22 +9,22 @@
 
 ## 읽은 책
 2019
-- 나는 LINE 개발자 입니다 (2019.10)
-- 만화로 배우는 블록체인 (2019.10)
-- .NET 예제로 배우는 단위 테스트 (2019.09 ~ 2019.10)
-- 아주 작은 습관의 힘 (2019.09 ~ 2019.10)
+- [나는 LINE 개발자 입니다](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%EB%82%98%EB%8A%94%20LINE%20%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9E%85%EB%8B%88%EB%8B%A4.md) (2019.10)
+- [만화로 배우는 블록체인](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%EB%A7%8C%ED%99%94%EB%A1%9C%20%EB%B0%B0%EC%9A%B0%EB%8A%94%20%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8.md) (2019.10)
+- [.NET 예제로 배우는 단위 테스트]([개발] .NET 예제로 배우는 단위테스트.md) (2019.09 ~ 2019.10)
+- [아주 작은 습관의 힘](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%EC%95%84%EC%A3%BC%20%EC%9E%91%EC%9D%80%20%EC%8A%B5%EA%B4%80%EC%9D%98%20%ED%9E%98.md) (2019.09 ~ 2019.10)
 - 처음 배우는 스프링부트2 (2019.08)
 - 이기적 직원들이 다니는 최고의 회사 (2019.07 ~ 2019.08)
-- 나는 아마존에서 미래를 다녔다 (2019.07)
-- DDD Start (2019.05 ~ 2019.07)
+- [나는 아마존에서 미래를 다녔다](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%EB%82%98%EB%8A%94%20%EC%95%84%EB%A7%88%EC%A1%B4%EC%97%90%EC%84%9C%20%EB%AF%B8%EB%9E%98%EB%A5%BC%20%EB%8B%A4%EB%85%94%EB%8B%A4.md) (2019.07)
+- [DDD Start](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20DDDStart.md) (2019.05 ~ 2019.07)
 - C#으로 배우는 적응형 코드 (2019.04 ~ 2019.05)
-- 클린코더 (2019.03)
+- [클린코더](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%ED%81%B4%EB%A6%B0%EC%BD%94%EB%8D%94.md) (2019.03)
 - [함께 자라기](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%ED%95%A8%EA%BB%98%EC%9E%90%EB%9D%BC%EA%B8%B0.md) (2019.03)
-- WPF MVVM 일주일만에 끝내기 (2019.02 ~ 2019.03)
+- [WPF MVVM 일주일만에 끝내기](https://github.com/YoungChulShin/TIR/blob/master/%EA%B8%B0%EC%88%A0%EC%84%9C%EC%A0%81/%5BC%23%5D%20WPF%20MVVM.md) (2019.02 ~ 2019.03)
 - 시작하세요 C# 6.0 프로그램 (2019.02)
-- 프로그래머의 기르, 멘토에게 묻다 (2019.01)
+- [프로그래머의 기르, 멘토에게 묻다](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%9D%98%EA%B8%B8%2C%EB%A9%98%ED%86%A0%EC%97%90%EA%B2%8C%20%EB%AC%BB%EB%8B%A4.md) (2019.01)
 - 깡샘의 안드로이드 프로그래밍 (2019.01)
-- Do it C언어 입문 (2018.12 ~ 2019.01)
+- [Do it C언어 입문](https://github.com/YoungChulShin/TIR/tree/master/%EA%B8%B0%EC%88%A0%EC%84%9C%EC%A0%81/%5BC%5D%20Do%20It%20C%EC%96%B8%EC%96%B4) (2018.12 ~ 2019.01)
 
 ## 읽을 책
 - 누워서읽는알고리즘
