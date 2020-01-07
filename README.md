@@ -2,12 +2,12 @@
 매일 읽은 책을 기록하고 목록을 관리합니다
 
 ## 읽고 있는 책
-- 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문 (2019.11 ~ )
-- 그림으로 배우는 Http&Network Basic (2019.11 ~ )
-- 클린아키텍쳐 (2019.12 ~)
+- 도메인 주도 설계 구현 (2019.12 ~ )
 
 ## 읽은 책
 2019
+- [클린아키텍쳐](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%ED%81%B4%EB%A6%B0%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.md) (2019.12 ~ 2020.01)
+- [그림으로 배우는 Http&Network Basic](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%EA%B7%B8%EB%A6%BC%EC%9C%BC%EB%A1%9C%EB%B0%B0%EC%9A%B0%EB%8A%94%20HTTP%26Network.md) (2019.11)
 - [홀로 성장하는 시대는 끝났다](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%ED%99%80%EB%A1%9C%20%EC%84%B1%EC%9E%A5%ED%95%98%EB%8A%94%20%EC%8B%9C%EB%8C%80%EB%8A%94%20%EB%81%9D%EB%82%AC%EB%8B%A4.md) (2019.10)
 - [그로스 해킹](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%EA%B7%B8%EB%A1%9C%EC%8A%A4%ED%95%B4%ED%82%B9.md) (2019.10)
 - 오브젝트 (2019.07 ~ 2019.11)
@@ -30,7 +30,8 @@
 
 ## 잠시 읽기 중단한 책
 - 스프링5 프로그래밍 입문 (2019.10)
-- 자바 웹 프로그래밍 Next Step(2019.10 )
+- 자바 웹 프로그래밍 Next Step(2019.10)
+- 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문 (2019.11 ~ )
 
 ## 읽을 책
 - 누워서읽는알고리즘
