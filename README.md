@@ -4,10 +4,13 @@
 ## 읽고 있는 책
 - 도메인 주도 설계 구현 (2019.12 ~ )
 - 스프링 부트와 AWS로 혼자 구현하는 웹 서비스 (2019.12 ~ )
-- 피플웨어 (2020.01 ~)
 - 오브젝트 2차 (2020.01 ~)
+- 실용주의 디버깅 (2020.02 ~)
 
 ## 읽은 책
+2020
+- [피플웨어](https://github.com/YoungChulShin/today_i_read/blob/master/2020/%5B%EC%9D%BC%EB%B0%98%5D%20%ED%94%BC%ED%94%8C%EC%9B%A8%EC%96%B4.md) (2020.01 ~ 2020.02)
+
 2019
 - [클린아키텍쳐](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%ED%81%B4%EB%A6%B0%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90.md) (2019.12 ~ 2020.01)
 - [그림으로 배우는 Http&Network Basic](https://github.com/YoungChulShin/TIR/blob/master/2019/%5B%EC%9D%BC%EB%B0%98%5D%20%EA%B7%B8%EB%A6%BC%EC%9C%BC%EB%A1%9C%EB%B0%B0%EC%9A%B0%EB%8A%94%20HTTP%26Network.md) (2019.11)
@@ -45,15 +48,12 @@
 - 익스트림 프로그래밍
 - 프로그래밍심리학
 - 알고리즘문제해결전략1, 2
-- 실용주의 디버깅
 - 프로페셔널 소프트웨어 개발
-- 피플웨어
 - 해커와화가
 - 소프트웨어 장인
 - Computer Systems
 - 모던 자바 인 액션
 - IT 인프라구조
-- 그림으로 배우는 HTTP & Network
 - 성공으로 이끄는 팀 개발 실천 기술
 - Effective Java
 - 자바 ORM 표준 JPA 프로그래밍
