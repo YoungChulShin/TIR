@@ -40,6 +40,11 @@
 - 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문 (2019.11 ~ )
 
 ## 읽을 책
+- [소프트웨어 장인](http://www.yes24.com/Product/Goods/20461940?scode=032&OzSrank=1)
+- [애자일 회고](http://www.yes24.com/Product/Goods/2813260?scode=032&OzSrank=1)
+- [어떻게 공부할 것인가](http://www.yes24.com/Product/Goods/15341766?scode=032&OzSrank=1)
+- [익스트림 프로그래밍](http://www.yes24.com/Product/Goods/2126201?scode=032&OzSrank=1)
+- [웹 서비스 개발 철저공략](http://www.yes24.com/Product/Goods/12528841?scode=032&OzSrank=1)
 - 누워서읽는알고리즘
 - Code Complete
 - 실용주의 프로그래머
@@ -50,10 +55,13 @@
 - 알고리즘문제해결전략1, 2
 - 프로페셔널 소프트웨어 개발
 - 해커와화가
-- 소프트웨어 장인
 - Computer Systems
 - 모던 자바 인 액션
 - IT 인프라구조
 - 성공으로 이끄는 팀 개발 실천 기술
 - Effective Java
 - 자바 ORM 표준 JPA 프로그래밍
+
+
+## 기타
+- [아샬이 추천하는 책 목록](https://www.youtube.com/watch?v=cB8AhHeLGwo)
