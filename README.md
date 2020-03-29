@@ -5,6 +5,7 @@
 - 도메인 주도 설계 구현 (2019.12 ~ )
 - 오브젝트 2차 (2020.01 ~)
 - 애자일 회고 (2020.03 ~)
+- JPA 프로그래밍 (2020.03 ~)
 
 ## 읽은 책
 2020
@@ -42,7 +43,6 @@
 
 ## 읽을 책
 - [소프트웨어 장인](http://www.yes24.com/Product/Goods/20461940?scode=032&OzSrank=1)
-- [애자일 회고](http://www.yes24.com/Product/Goods/2813260?scode=032&OzSrank=1)
 - [어떻게 공부할 것인가](http://www.yes24.com/Product/Goods/15341766?scode=032&OzSrank=1)
 - [익스트림 프로그래밍](http://www.yes24.com/Product/Goods/2126201?scode=032&OzSrank=1)
 - [웹 서비스 개발 철저공략](http://www.yes24.com/Product/Goods/12528841?scode=032&OzSrank=1)
@@ -61,7 +61,6 @@
 - IT 인프라구조
 - 성공으로 이끄는 팀 개발 실천 기술
 - Effective Java
-- 자바 ORM 표준 JPA 프로그래밍
 
 
 ## 기타
