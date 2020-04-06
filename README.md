@@ -2,13 +2,13 @@
 매일 읽은 책을 기록하고 목록을 관리합니다
 
 ## 읽고 있는 책
-- 도메인 주도 설계 구현 (2019.12 ~ )
 - 오브젝트 2차 (2020.01 ~)
-- 애자일 회고 (2020.03 ~)
 - JPA 프로그래밍 (2020.03 ~)
+- 애자일 회고 (2020.03 ~)
 
 ## 읽은 책
 2020
+- [도메인 주도 설계 구현](https://github.com/YoungChulShin/today_i_read/tree/master/%EA%B8%B0%EC%88%A0%EC%84%9C%EC%A0%81/%5BJava%5D%20Implementing%20DDD) (2019.12 ~ 2020.04)
 - [피플웨어](https://github.com/YoungChulShin/today_i_read/blob/master/2020/%5B%EC%9D%BC%EB%B0%98%5D%20%ED%94%BC%ED%94%8C%EC%9B%A8%EC%96%B4.md) (2020.01 ~ 2020.02)
 - 스프링 부트와 AWS로 혼자 구현하는 웹 서비스 (2019.12 ~ 2020.02)
 - [실용주의 디버깅](https://github.com/YoungChulShin/today_i_read/blob/master/2020/%5B%EB%94%94%EB%B2%84%EA%B9%85%5D%20%EC%8B%A4%EC%9A%A9%EC%A3%BC%EC%9D%98%20%EB%94%94%EB%B2%84%EA%B9%85.md) (2020.02 ~ 2020.03)
