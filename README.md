@@ -9,7 +9,7 @@
 
 ## 읽은 책
 2020
-- Do it. Vue JS
+- Do it! Vue JS (2020.05)
 - [도메인 주도 설계 구현](https://github.com/YoungChulShin/today_i_read/tree/master/%EA%B8%B0%EC%88%A0%EC%84%9C%EC%A0%81/%5BJava%5D%20Implementing%20DDD) (2019.12 ~ 2020.04)
 - [피플웨어](https://github.com/YoungChulShin/today_i_read/blob/master/2020/%5B%EC%9D%BC%EB%B0%98%5D%20%ED%94%BC%ED%94%8C%EC%9B%A8%EC%96%B4.md) (2020.01 ~ 2020.02)
 - 스프링 부트와 AWS로 혼자 구현하는 웹 서비스 (2019.12 ~ 2020.02)
