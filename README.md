@@ -4,11 +4,11 @@
 ## 읽고 있는 책
 - 오브젝트 2차 (2020.01 ~)
 - JPA 프로그래밍 (2020.03 ~)
-- 애자일 회고 (2020.03 ~)
-- 카프카, 데이터 플랫폼 최강자 (2020.04 ~)
+- 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문 (2020.05 ~ )
 
 ## 읽은 책
 2020
+- [카프카, 데이터 플랫폼 최강자](https://github.com/YoungChulShin/study_book_apache_kafka) (2020.04 ~ 2020.05)
 - Do it! Vue.js 입문 (2020.04)
 - [도메인 주도 설계 구현](https://github.com/YoungChulShin/today_i_read/tree/master/%EA%B8%B0%EC%88%A0%EC%84%9C%EC%A0%81/%5BJava%5D%20Implementing%20DDD) (2019.12 ~ 2020.04)
 - [피플웨어](https://github.com/YoungChulShin/today_i_read/blob/master/2020/%5B%EC%9D%BC%EB%B0%98%5D%20%ED%94%BC%ED%94%8C%EC%9B%A8%EC%96%B4.md) (2020.01 ~ 2020.02)
@@ -41,7 +41,7 @@
 ## 잠시 읽기 중단한 책
 - 스프링5 프로그래밍 입문 (2019.10)
 - 자바 웹 프로그래밍 Next Step(2019.10)
-- 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문 (2019.11 ~ )
+- 애자일 회고 (2020.03 ~)
 
 ## 읽을 책
 - [소프트웨어 장인](http://www.yes24.com/Product/Goods/20461940?scode=032&OzSrank=1)
