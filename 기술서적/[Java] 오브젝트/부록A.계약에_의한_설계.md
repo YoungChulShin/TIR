@@ -191,3 +191,125 @@ public void Invariant()
    ~~~
 
 ### 가변성 규칙
+서브타입은 슈퍼타입이 발생시키는 예외와 다른 타입의 예외를 발생시켜서는 안된다
+- _지금까지 내용을 들어왔다면 당연한 이야기_
+- 해당 예외가 부모클래스가 던지는 예외의 상속 계층의 예외라면 상관없다
+- 클라이언트의 입장에서는 계약에 명시된 `A`라는 예외가 올 지 알고 준비하고 있는데, 갑자기 `B`라는 예외가 온다면 예외처리를 할 수 없을 것이기 때문이다
+- 추가적인 변형도 존재한다
+   1. 부모클래스에서 정의하지 않은 예외를 던지는 경우
+   2. 예외를 던지지 않는 경우
+
+서브타입의 리턴 타입은 공변성을 가져야 한다
+- 공변, 반공변, 무공변부터 알아보자
+   - `S`가 `T`의 서브타입이라고 하자. 이때 프로그램의 어떤 위치에서 두 타입 사이의 치환 가능성을 보면
+   - 공변성(covariance)
+      - `S`와 `T`사이의 서브타입 관계가 그대로 유지된다
+      - 이 경우 해당 위치에서 서브타입인 `S`가 슈퍼타입인 `T` 대신 사용될 수 있다
+      - 리스코프 치환 원칙이 공변성과 관련된 원칙이라고 생각하면 된다
+   - 반공변성(contracovariance)
+      - `S`와 `T`사이의 서브타입 관계가 역전된다
+      - 슈퍼타입인 `T`가 서브타입인 `S` 대신 사용될 수 있다
+   - 무공변성(invariance)
+      - 둘 사이에 아무런 관계도 존재하지 않는다
+      - 서로를 대신할 수 없다
+
+- 예제 그럼
+![a-1](/Images/오브젝트/a-2.png)
+   - 배경
+      - 지금까지 서브타이핑은 단순히 서브타입이 슈퍼타입의 모든 위치에 대체 가능하다는 것이다
+      - 공변과 반공변의 영역으로 들어가기 위해서는 타입의 관계가 아니라 메서드의 리턴 타입과 파라미터 타입에 초점을 맞춰야한다
+   - 리턴 타입 공변성
+      ```java
+      // Customer Class
+      public class Customer {
+         public void order(BookStall bookstall) {
+            this.book = bookstall.sell(new IndependentPublisher())
+         }
+      }
+
+      // 일반적인 구매 방법
+      // 리턴 타입: Book
+      new Customer().order(new BookStall());
+
+      // MagazineStore는 BookStall의 서브타입이기 때문에 BookStall을 대신해서 협력할 수 있다
+      // Customer가 Bookstall에서 책을 구매할 수 있으면, MagazineStore에서도 구매할 수 있다
+      // 리턴타입: MagazineStore
+      new Customer().order(new MagazineStore());
+      ```
+      - 위의 경우 sell 메서드의 return 타입이 `Book`에서 `MagazineBook`으로 변경되는데 Customer 입장에서는 동일하다
+      - 부모클래스에서 구현된 메서드를 자신 클래스에서 오브라이딩할 때 부모 클래스에서 선언한 반환타입의 서브타입으로 지정할 수 있는 특성을 `리턴 타입 공변성` 이라고 한다
+      - 리스코프 치환원칙과 함께 보면, 서브타입에서 메서드의 사후조건이 강화되어도 클라이언트 입장에서는 영향이 없다는 개념과 같다.<br>
+      슈퍼타입 대신 서브 타입을 반환하는 것은 더 강력한 사후 조건을 정의하는 것과 같다. 
+
+서브타입의 메서드 파라미터는 반공변성을 가져야한다
+- MagazineStore의 `sell` 메서드 파라미터를 `Publisher`로 변경한다면 어떻게 될까?
+- 예시 코드
+   ```java
+   public class MagazineStore extends Bookstall {
+      @override
+      public Magazine sell(Publisher publisher) {  // IndependentPublisher -> Publisher
+         return new Magazine(publisher);
+      }
+   }
+
+   // Customer의 `order` 메서드는 BookStall의 `sell` 메서드에 `IndependentPublisher` 인스턴스를 전달한다
+   // BookStall 대신 MagazineStore 인스턴스와 협력한다면 `IndependentPublisher` 인스턴스가 MagazineStore의 파라미터로 전달된다
+   ```
+- `Publisher`가 `IndependentPublisher`의 슈퍼타입이기 때문에 문제가 없다
+- 부모 클래스에서 구현된 메서드를 자식 클래스에서 오버라이딩 할 때 파라미터 타입을 부모 클래스에서 사용한 파라미터의 슈퍼타입으로 지정할 수 있는 특성을 `파라미터 타입 반공변성`이라고 부른다
+- 리스코프 치환원칙에서 서브타입에서 사전조건이 약화되더라도 클라이언트 입장에서는 영향이 없다. <br>
+연관지어보면 서브타입 대신 슈퍼타입을 파라미터로 받는 것은 더 약한 사후조건을 정의하는 것과 같다. <br>
+_파라미터 입장에서는 더 약한 조건이 들어오는 건데, 약한조건이 들어와도 클라이언트 입장에서는 영향이 없으니까_
+
+### 함수와 서브타이핑
+
+파라미터 타입이 IndependentPublisher이고, Book인스턴스를 반환하는 sell 메서드
+```scala
+def sell(publisher:IndependentPublisher): Book = new Book(publisher)
+```
+
+위 함수를 이름을 통해 참조하거나 호출할 필요가 없다면?
+```scala
+(publisher:IndependentPublisher)=> new Book(publisher)
+```
+
+파라미터 타입과 리턴 타입을 이용해서 함수를 정의할 수 있다
+```scala
+// 'IndependentPublisher 타입을 받으면 Book을 리턴한다' 겠지?
+IndependentPublisher => Book
+```
+
+Customer에 적용해보면
+```scala
+class Customer {
+   var book: Book = null
+
+   // BookStall 클래스를 정의하지 않고 함수형으로 선언
+   def order(store: IndependentPublisher => Book): Unit = {
+      book = store(new IndependentPublisher())
+   }
+}
+```
+
+이렇게 사용할 수 있다
+```scala
+// book이 리턴되겠지?
+new Customer().order((publisher: IndependentPublisher) => new Book(publisher))
+```
+
+여기서도 서브타입 메서드가 슈퍼타입 메서드를 대체할 수 있을까? : 그렇다
+```scala
+new Customer().order((publisher: Publisher) => new Magazine(publisher))
+```
+- `IndependentPublisher` -> `Publisher`: 파라미터 타입의 반공변성
+- `Book` -> `Magazine`: 리턴 타입의 공변성
+- 따라서 `Publisher => Magazine` 타입은 `IndependentPublisher => Book` 의 서브타입이다
+
+
+
+### 결론
+진정한 서브타이핑 관계를 만들고 싶다면..
+- 서브타입에 더 강력한 사전 조건을 정의해서는 안된다
+- 서브타입에 더 완화된 사후조건을 정의해서는 안된다
+- 슈퍼타입의 불변식을 유지하기 위해 항상 노력해야 한다
+- 서브타입에서 슈퍼타입에서 정의하지 않은 예외를 던져서는 안된다
