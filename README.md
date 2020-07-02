@@ -9,9 +9,9 @@
 
 ## 읽은 책
 2020
-- 
 - [오브젝트 2차](https://github.com/YoungChulShin/TIR/tree/master/%EA%B8%B0%EC%88%A0%EC%84%9C%EC%A0%81/%5BJava%5D%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8) (2020.01 ~ 2020.06) * 스터디
 - 자바 ORM 표준 JPA 프로그래밍 (2020.03 ~ 2020.06)
+- 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문 (2020.05)
 - [카프카, 데이터 플랫폼 최강자](https://github.com/YoungChulShin/study_book_apache_kafka) (2020.04 ~ 2020.05) * 스터디
 - 커피 한잔 마시면서 끝내는 Vue.JS (2020.05)
 - Do it! Vue.js 입문 (2020.04)
