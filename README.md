@@ -2,15 +2,20 @@
 매일 읽은 책을 기록하고 목록을 관리합니다
 
 ## 읽고 있는 책
-- 오브젝트 2차 (2020.01 ~)
-- JPA 프로그래밍 (2020.03 ~)
-- 도커/쿠버네티스를 활용한 컨테이너 개발 실전 입문 (2020.05 ~ )
+- 스프링 5와 Vue.js 2로 시작하는 모든 웹 애플리케이션 개발 (2020.05 ~)
+- 쿠버네티스 인 액션 (2020.06 ~) * 스터디
+- 스프링 마이크로서비스 코딩 공작소 (2020.07 ~) * 스터디
+- C#으로 배우는 적응형 코드 2차 (2020.07 ~) * 스터디
 
 ## 읽은 책
 2020
-- [카프카, 데이터 플랫폼 최강자](https://github.com/YoungChulShin/study_book_apache_kafka) (2020.04 ~ 2020.05)
+- 
+- [오브젝트 2차](https://github.com/YoungChulShin/TIR/tree/master/%EA%B8%B0%EC%88%A0%EC%84%9C%EC%A0%81/%5BJava%5D%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8) (2020.01 ~ 2020.06) * 스터디
+- 자바 ORM 표준 JPA 프로그래밍 (2020.03 ~ 2020.06)
+- [카프카, 데이터 플랫폼 최강자](https://github.com/YoungChulShin/study_book_apache_kafka) (2020.04 ~ 2020.05) * 스터디
+- 커피 한잔 마시면서 끝내는 Vue.JS (2020.05)
 - Do it! Vue.js 입문 (2020.04)
-- [도메인 주도 설계 구현](https://github.com/YoungChulShin/today_i_read/tree/master/%EA%B8%B0%EC%88%A0%EC%84%9C%EC%A0%81/%5BJava%5D%20Implementing%20DDD) (2019.12 ~ 2020.04)
+- [도메인 주도 설계 구현](https://github.com/YoungChulShin/today_i_read/tree/master/%EA%B8%B0%EC%88%A0%EC%84%9C%EC%A0%81/%5BJava%5D%20Implementing%20DDD) (2019.12 ~ 2020.04) * 스터디
 - [피플웨어](https://github.com/YoungChulShin/today_i_read/blob/master/2020/%5B%EC%9D%BC%EB%B0%98%5D%20%ED%94%BC%ED%94%8C%EC%9B%A8%EC%96%B4.md) (2020.01 ~ 2020.02)
 - 스프링 부트와 AWS로 혼자 구현하는 웹 서비스 (2019.12 ~ 2020.02)
 - [실용주의 디버깅](https://github.com/YoungChulShin/today_i_read/blob/master/2020/%5B%EB%94%94%EB%B2%84%EA%B9%85%5D%20%EC%8B%A4%EC%9A%A9%EC%A3%BC%EC%9D%98%20%EB%94%94%EB%B2%84%EA%B9%85.md) (2020.02 ~ 2020.03)
@@ -41,7 +46,6 @@
 ## 잠시 읽기 중단한 책
 - 스프링5 프로그래밍 입문 (2019.10)
 - 자바 웹 프로그래밍 Next Step(2019.10)
-- 애자일 회고 (2020.03 ~)
 
 ## 읽을 책
 - [소프트웨어 장인](http://www.yes24.com/Product/Goods/20461940?scode=032&OzSrank=1)
