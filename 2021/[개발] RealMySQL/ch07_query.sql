@@ -63,4 +63,20 @@ select MD5('abc'), sha('abc'), sha1('abc'), sha2('abc', 224);
 ## 처리 대기(sleep)
 select sleep(10);
 
+## Benchmark
+select benchmark(100000, md5('abcdef'));
 
+## IP 주소 변환
+create table tab_acesslog(access_dttm datetime, ip_addr integer unsigned);
+insert into tab_acesslog values (now(), inet6_aton('127.0.0.130'));
+
+## 암호화
+SELECT PASSWORD('mypass');
+
+## 주석
+-- 한줄 주석
+/*
+ 여러줄 주석
+ 주석~~~
+ */
+# 이것도 한줄 주석
