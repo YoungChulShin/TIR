@@ -80,3 +80,11 @@ SELECT PASSWORD('mypass');
  주석~~~
  */
 # 이것도 한줄 주석
+
+# SELECT
+## where 절 인덱스 사용
+CREATE TABLE tb_test (age VARCHAR(10), INDEX idx_age(age));
+INSERT INTO tb_test VALUES ('1'),('2'),('3'),('4'),('5'),('6'),('7');
+explain SELECT * FROM tb_test WHERE age = 2;
+explain SELECT * FROM tb_test WHERE age = '2';
+DROP TABLE tb_test;
