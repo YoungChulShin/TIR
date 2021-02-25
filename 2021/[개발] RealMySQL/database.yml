@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  db:
+    image: mysql
+    container_name: realmysql
+    volumes:
+    - ~/docker/volume/realmysql:/var/lib/mysql:rw
+    environment:
+      MYSQL_DATABASE: realmysql
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: 1323
+    ports:
+    - 3306:3306

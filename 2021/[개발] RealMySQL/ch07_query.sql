@@ -174,4 +174,5 @@ SELECT NULL = NULL,
        CASE WHEN NULL = NULL THEN 1 ELSE 0 END,
        IF(NULL IS NULL, 1, 0);
 
-
+## 날짜 비교
+SELECT DATE(NOW()), NOW();
