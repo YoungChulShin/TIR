@@ -1,4 +1,10 @@
 
+## Null 체크
+SELECT NULL = NULL;
+SELECT CASE WHEN NULL = NULL THEN 1 ELSE 0 END;
+SELECT CASE WHEN NULL IS NULL THEN 1 ELSE 0 END;
+
+
 select null is null;
 explain select 1=1, null<=>null, null<=>1;
 
@@ -81,10 +87,22 @@ explain SELECT * FROM tb_test WHERE age = 2;
 explain SELECT * FROM tb_test WHERE age = '2';
 DROP TABLE tb_test;
 
+explain SELECT * FROM employees WHERE first_name='Sumant' OR last_name='Staudhammer';
+
 ## null 비교
 SELECT NULL = NULL,
        CASE WHEN NULL = NULL THEN 1 ELSE 0 END,
        IF(NULL IS NULL, 1, 0);
+
+EXPLAIN SELECT * FROM titles WHERE to_date IS NULL;
+EXPLAIN SELECT * FROM titles WHERE ISNULL(to_date);
+EXPLAIN SELECT * FROM titles WHERE ISNULL(to_date) = true;
+
+## 문자, 숫자 비교
+EXPLAIN SELECT * FROM employees WHERE emp_no = 10001;
+EXPLAIN SELECT * FROM employees WHERE first_name = 'Smith';
+EXPLAIN SELECT * FROM employees WHERE emp_no = '10001';
+EXPLAIN SELECT * FROM employees WHERE first_name = 10001;
 
 ## 날짜 비교
 SELECT DATE(NOW()), NOW();
