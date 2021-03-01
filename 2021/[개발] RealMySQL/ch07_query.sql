@@ -1,93 +1,5 @@
-# 예제 테이블 생성
 
-DROP DATABASE IF EXISTS employees;
-CREATE DATABASE IF NOT EXISTS employees;
-USE employees;
-
-SELECT 'CREATING DATABASE STRUCTURE' as 'INFO';
-
-DROP TABLE IF EXISTS dept_emp,
-                     dept_manager,
-                     titles,
-                     salaries,
-                     employees,
-                     departments;
-
--- set storage_engine = InnoDB;
--- select CONCAT('storage engine: ', @@storage_engine) as INFO;
-
-CREATE TABLE employees (
-    emp_no      INT             NOT NULL,
-    birth_date  DATE            NOT NULL,
-    first_name  VARCHAR(14)     NOT NULL,
-    last_name   VARCHAR(16)     NOT NULL,
-    gender      ENUM ('M','F')  NOT NULL,
-    hire_date   DATE            NOT NULL,
-    PRIMARY KEY (emp_no)
-);
-
-CREATE TABLE departments (
-    dept_no     CHAR(4)         NOT NULL,
-    dept_name   VARCHAR(40)     NOT NULL,
-    PRIMARY KEY (dept_no),
-    UNIQUE  KEY (dept_name)
-);
-
-CREATE TABLE dept_manager (
-   dept_no      CHAR(4)         NOT NULL,
-   emp_no       INT             NOT NULL,
-   from_date    DATE            NOT NULL,
-   to_date      DATE            NOT NULL,
-   KEY         (emp_no),
-   KEY         (dept_no),
-   FOREIGN KEY (emp_no)  REFERENCES employees (emp_no)    ON DELETE CASCADE,
-   FOREIGN KEY (dept_no) REFERENCES departments (dept_no) ON DELETE CASCADE,
-   PRIMARY KEY (emp_no,dept_no)
-);
-
-CREATE TABLE dept_emp (
-    emp_no      INT             NOT NULL,
-    dept_no     CHAR(4)         NOT NULL,
-    from_date   DATE            NOT NULL,
-    to_date     DATE            NOT NULL,
-    KEY         (emp_no),
-    KEY         (dept_no),
-    FOREIGN KEY (emp_no)  REFERENCES employees   (emp_no)  ON DELETE CASCADE,
-    FOREIGN KEY (dept_no) REFERENCES departments (dept_no) ON DELETE CASCADE,
-    PRIMARY KEY (emp_no,dept_no)
-);
-
-CREATE TABLE titles (
-    emp_no      INT             NOT NULL,
-    title       VARCHAR(50)     NOT NULL,
-    from_date   DATE            NOT NULL,
-    to_date     DATE,
-    KEY         (emp_no),
-    FOREIGN KEY (emp_no) REFERENCES employees (emp_no) ON DELETE CASCADE,
-    PRIMARY KEY (emp_no,title, from_date)
-);
-
-CREATE TABLE salaries (
-    emp_no      INT             NOT NULL,
-    salary      INT             NOT NULL,
-    from_date   DATE            NOT NULL,
-    to_date     DATE            NOT NULL,
-    KEY         (emp_no),
-    FOREIGN KEY (emp_no) REFERENCES employees (emp_no) ON DELETE CASCADE,
-    PRIMARY KEY (emp_no, from_date)
-);
-
-
-create table tb_boolean(bool_value boolean);
-
-select *
-from tb_boolean
-where bool_value = FALSE
-
-insert into tb_boolean value (44);
-insert into tb_boolean value (FALSE);
-
-select null is null
+select null is null;
 explain select 1=1, null<=>null, null<=>1;
 
 select IFNULL(null, 3);
@@ -176,3 +88,122 @@ SELECT NULL = NULL,
 
 ## 날짜 비교
 SELECT DATE(NOW()), NOW();
+
+## Distinct
+### 개별 선택
+EXPLAIN SELECT DISTINCT emp_no FROM salaries;
+EXPLAIN SELECT emp_no FROM salaries GROUP BY emp_no;
+
+### 집합 선택
+EXPLAIN SELECT COUNT(DISTINCT s.salary) FROM employees e, salaries s WHERE e.emp_no = s.emp_no AND e.emp_no BETWEEN 100001 AND 100100;
+SELECT DISTINCT first_name, last_name FROM employees WHERE emp_no BETWEEN 10001 AND 10200;
+SELECT COUNT(DISTINCT first_name), COUNT(DISTINCT last_name) FROM employees WHERE emp_no BETWEEN 10001 AND 10200;
+SELECT COUNT(DISTINCT first_name, last_name) FROM employees WHERE emp_no BETWEEN 10001 AND 10200;
+
+## LIMIT
+EXPLAIN SELECT * FROM employees LIMIT 0, 10;
+EXPLAIN SELECT first_name FROM employees GROUP BY first_name LIMIT 0, 10;
+
+## JOIN
+EXPLAIN SELECT * FROM employees e, dept_emp de WHERE e.emp_no = de.emp_no;
+
+EXPLAIN SELECT * FROM employees e LEFT JOIN dept_manager mgr ON e.emp_no = mgr.emp_no WHERE mgr.dept_no = 'd001';
+EXPLAIN SELECT * FROM employees e LEFT JOIN dept_manager mgr ON e.emp_no = mgr.emp_no AND mgr.dept_no = 'd001';
+
+### ANTI JOIN
+CREATE TABLE tab_test1(id INT, PRIMARY KEY(id));
+CREATE TABLE tab_test2(id INT);
+INSERT INTO tab_test1 VALUES (1),(2),(3),(4);
+INSERT INTO tab_test2 VALUES (1),(2);
+
+EXPLAIN SELECT t1.id FROM tab_test1 t1 WHERE t1.id NOT IN (SELECT t2.id FROM tab_test2 t2);
+EXPLAIN SELECT t1.id FROM tab_test1 t1 LEFT JOIN tab_test2 t2 ON t1.id = t2.id WHERE t2.id IS NULL;
+
+### Inner join, Outer Join
+explain select sql_no_cache  straight_join count(*)
+from dept_emp de
+inner join employees e on de.emp_no = e.emp_no;
+
+explain select sql_no_cache  straight_join count(*)
+from dept_emp de
+left join employees e on de.emp_no = e.emp_no;
+
+### Delayed Join
+explain select * from dept_emp de, employees e where de.dept_no = 'd001' and e.emp_no = de.emp_no limit 10;
+explain select * from dept_emp de, employees e where de.dept_no = 'd001' and e.emp_no = de.emp_no limit 100, 10;
+explain select * from (select * from dept_emp where dept_no = 'd001' limit 100, 10) de, employees e where e.emp_no = de.emp_no;
+
+## Group by
+select  first_name from employees group by gender;
+select first_name, last_name, count(*) from employees group by first_name, last_name order by last_name
+
+### Group by Order by null
+explain select from_date from salaries group by from_date;
+explain select from_date from salaries group by from_date order by null;
+
+### Group by with rollup
+select dept_no, count(*) from dept_emp group by dept_no with rollup ;
+select first_name, last_name, count(*) from employees group by first_name, last_name with rollup ;
+
+## Order by
+explain select first_name, last_name from employees order by rand();
+
+## sub query
+### 상관 서브쿼리
+explain
+select *
+from employees e
+where exists(
+    select 1
+    from dept_emp de
+    where de.emp_no = e.emp_no
+      and de.from_date between '2000-01-01' and '2011-12-30')
+
+### select sub query
+select emp_no, (select dept_name from departments where dept_name = 'Sales1')
+from dept_emp
+limit 10;
+
+select emp_no, (select dept_name from departments)
+from dept_emp
+limit 10;
+
+select emp_no, (select dept_no, dept_name from departments where dept_name = 'Sales1')
+from dept_emp
+limit 10;
+
+explain
+select sql_no_cache
+    count(concat(e1.first_name, (select e2.first_name from employees e2 where e2.emp_no = e1.emp_no)))
+from employees e1;
+
+explain
+select sql_no_cache
+    count(concat(e1.first_name, e2.first_name))
+from employees e1, employees e2
+where e1.emp_no = e2.emp_no;
+
+### where in subquery
+explain
+select * from dept_emp de
+where de.dept_no in (
+    select dept_no from departments where dept_name = 'Finance');
+
+### from subquery
+explain
+select * from (
+  select *
+  from (
+   select *
+   from employees
+   where emp_no in (10001, 10002, 10010, 10201)) x
+) y;
+
+## Union
+selecT sql_no_cache * from employees where emp_no between 10001 and 200000
+union distinct
+selecT sql_no_cache * from employees where emp_no between 200001 and 500000;
+
+selecT sql_no_cache * from employees where emp_no between 10001 and 200000
+union all
+selecT sql_no_cache * from employees where emp_no between 200001 and 500000;
