@@ -1,19 +1,39 @@
+## SQL 모드
+show variables like 'sql_mode';
+
+## 문자열 표시
+SELECT * FROM departments WHERE dept_no = 'd001';
+SELECT * FROM departments WHERE dept_no = "d001";
+
+SELECT 'd''001', 'd"001', "d'001", "d""001";
+
 
 ## Null 체크
 SELECT NULL = NULL;
 SELECT CASE WHEN NULL = NULL THEN 1 ELSE 0 END;
 SELECT CASE WHEN NULL IS NULL THEN 1 ELSE 0 END;
 
-
+SELECT  'abc' REGEXP '^[x-z]';
 select null is null;
-explain select 1=1, null<=>null, null<=>1;
 
-select IFNULL(null, 3);
-select isnull(3);
+SELECT 'aec' LIKE 'a__';
 
-select now(), sleep(2), sysdate();
+explain SELECT 1=1, null=null, null=1;
+explain SELECT 1<=>1, null<=>null, null<=>1;
 
-select now();
+select IFNULL(null, 3); ## 3
+select IFNULL(0, 3); ## 0
+select isnull(3); ## 0
+select isnull(3/0); ## 1
+
+select sysdate(), sleep(2), sysdate();
+select now(), sleep(2), now();
+
+EXPLAIN SELECT * FROM dept_emp USE INDEX (`PRIMARY`)
+WHERE dept_no BETWEEN 'd003' AND 'd005' and emp_no = 10001;
+
+EXPLAIN SELECT * FROM dept_emp USE INDEX (`PRIMARY`)
+WHERE dept_no in ('d003','d004','d005') and emp_no = 10001;
 
 
 ## 날짜와 시간의 포멧
