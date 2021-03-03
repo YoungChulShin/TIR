@@ -38,21 +38,24 @@ WHERE dept_no in ('d003','d004','d005') and emp_no = 10001;
 
 ## 날짜와 시간의 포멧
 select date_format(now(), '%Y-%m-%d %H');
-select str_to_date('2021-02-19 15:34:33', '%Y-%m-%d %H:%i:%s');
+select str_to_date('2021-01-19 15:34:33', '%Y-%m-%d %H:%i:%s');
 
 ## 날짜와 시간의 연산
 select now(), date_add(now(), interval 1 day);
 select now(), date_add(now(), interval -5 minute);
 
 ## 타임 스탬프 연산
-select unix_timestamp(), unix_timestamp(date_add(now(), interval -1 minute)), from_unixtime(unix_timestamp());
+select now(),
+       unix_timestamp(),
+       unix_timestamp(date_add(now(), interval -1 minute)),
+       from_unixtime(unix_timestamp());
 
 ## 문자열 처리
-select rpad('rtest', 10, '_'), lpad('ltest', 10, '-');
+select rpad('rtest', 10, '-'), lpad('ltest', 10, '-');
 select replace(ltrim('     hi    '),' ', '_'), replace(rtrim('     hi    '),' ', '_'), replace(trim('     hi    '),' ', '_')
 
 ## 문자열 결합
-select concat('hi, ', 'my name is', ' youngchul') as name, concat('born ', 1984), concat(cast(38 as char), ' years old')
+select concat('hi, ', 'my name is', ' youngchul') as name
 select concat_ws(',', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 ## Group by 문자열 결합
@@ -72,14 +75,23 @@ select now(),
        end;
 
 ## 타입의 전환(CAST, CONVERT)
-select cast('1234' as signed integer) as converted_integer, cast('2000-01-01' as date) as converted_date,
-       1 - 2, cast(1 - 2 as unsigned );
+select cast('1234' as signed integer) as converted_integer,
+       cast('2000-01-01' as date) as converted_date,
+       1 - 2,
+       cast(1 - 2 as unsigned ),
+       convert(1 - 2, unsigned ),
+       convert('ABC' using 'utf8');
+
+select unhex(1)
 
 ## 암호화 및 해시 함수(MD5, SHA)
 select MD5('abc'), sha('abc'), sha1('abc'), sha2('abc', 224);
 
 ## 처리 대기(sleep)
 select sleep(10);
+select sleep(1)
+from employees
+where emp_no between 10001 and 10010;
 
 ## Benchmark
 select benchmark(100000, md5('abcdef'));
