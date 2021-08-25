@@ -4,8 +4,6 @@
 ## 읽고 있는 책
 - 모던 자바 인 액션 (2020.04 ~ )
 - Effective Java (2021.02 ~)
-- Kubernetes In Action (2021.04 ~) * 2회차
-- 함께 자라기 (2021/04 ~) * n회차
 
 ## 읽은 책
 2021
@@ -61,8 +59,8 @@
 - [Do it C언어 입문](https://github.com/YoungChulShin/TIR/tree/master/%EA%B8%B0%EC%88%A0%EC%84%9C%EC%A0%81/%5BC%5D%20Do%20It%20C%EC%96%B8%EC%96%B4) (2018.12 ~ 2019.01)
 
 ## 잠시 읽기 중단한 책
-- 스프링5 프로그래밍 입문 (2019.10)
-- 자바 웹 프로그래밍 Next Step(2019.10)
+- Kubernetes In Action (2021.04 ~) * 2회차
+- 함께 자라기 (2021/04 ~) * n회차
 
 ## 읽을 책
 - [소프트웨어 장인](http://www.yes24.com/Product/Goods/20461940?scode=032&OzSrank=1)
