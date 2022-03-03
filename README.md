@@ -3,9 +3,11 @@
 
 ## 읽고 있는 책
 - DDD Quickly (2022.02 ~ )
-- 만들면서 배우는 클린 아키텍쳐 (2022.02 ~)
 
 ## 읽은 책
+2022
+- [만들면서 배우는 클린 아키텍쳐](https://github.com/YoungChulShin/TIR/tree/master/기술서적/%5B기본%5D%20만들면서%20배우는%20클린아키텍쳐) (2022.02 ~ 2022.03)
+
 2021
 - [Effective Java](https://github.com/YoungChulShin/TIR/tree/master/%EA%B8%B0%EC%88%A0%EC%84%9C%EC%A0%81/%5BJava%5D%20EffectiveJava) (2021.02 ~2021.12)
 - 일관성 있는 웹 서비스 인터페이스 설계를 위한 REST API 디자인 규칙 (2021.08)
