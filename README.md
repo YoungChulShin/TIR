@@ -2,12 +2,14 @@
 매일 읽은 책을 기록하고 목록을 관리합니다
 
 ## 읽고 있는 책
+- 스프링 시큐리티 인 액션 (2023.07 ~)
 - 자바 최적화 (2023.06 ~)
 - 객체지향의 사실과 오해 (2023.07 ~)
 
 ## 읽은 책
 2023
-- 쿠버네티스 개발 전략 (2023.03)
+- [RealMySQL](https://github.com/YoungChulShin/book-real-mysql) (2023.02)
+- [쿠버네티스 개발 전략](https://github.com/YoungChulShin/book_k8s_dev_strategy) (2023.03)
 - [만들면서 배우는 클린 아키텍쳐](https://github.com/YoungChulShin/TIR/tree/master/기술서적/%5B기본%5D%20만들면서%20배우는%20클린아키텍쳐) (2023.06)
 
 2022
