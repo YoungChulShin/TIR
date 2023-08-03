@@ -29,5 +29,26 @@ __CSRF 보호 샘플 코드__
    - CsrfToken: 토큰 정보를 기술한다.
       - 헤더 이름: X-CSRF-TOKEN
       - 토큰의 값을 저장하는 요청의 특성 이름: _csrf
+      - 토큰의 값
    - CsrfTokenRepository: CSRF 토큰을 생성, 저장, 로드하는 객체를 기술한다.
+
+## CORS(공유 출처 리소스 공유) 이용
+CORS란?
+- 기본적으로 브라우저는 사이트가 로드된 도메인 이외의 도메인에 대한 요청을 허용하지 않는다. 
+   - 예: example.com에서 사이트를 열였다면 브라우저는 이 사이트에서 api.example.com에 대한 요청을 허용하지 않는다. 
+- __브라우저는 CORS 매커니즘으로 이 정책을 완화하고 일부 조건에 다른 출처간의 요청을 허용한다고 볼 수 있다.__
+
+### CORS 동작방식
+HTTP 헤더에 정의되는 CORS 정보
+- Access-Control-Allow-Origin: 도메인의 리소스에 접근할 수 있는 외부 도메인을 지정
+- Access-Control-Allow-Methods: 다른 도메인에 대한 접근은 허용하지만 특정 HTTP 방식만 허용하고 싶을 때 지정한다
+- Access-Control-Allow-Headers: 특정 요청에 이용할 수 있는 헤더에 제한을 추가한다
+
+__스프링 시큐리티는 기본적으로 헤더에 응답을 추가하지 않는다.__
+
+__CORS 매커니즘은 브라우저에 관한 것이며 CSRF처럼 엔드포인트를 보호하는 것은 아니다__
+- 브라우저는 요청을 수행하지만 출처가 응답에 지정되지 않으면 응답을 수락하지 않는다. 
+
+__구현 샘플 코드__
+- https://github.com/YoungChulShin/book-spring-security-in-action/tree/master/ch10-ex2-cors
 
