@@ -1,5 +1,51 @@
+# REST 소개
+## 웹 아키텍처
+웹이 지속적으로 확장될 수 있도록 한다. 
+
+웹의 구조적 스타일
+1. Client/Server
+   - 관심사의 분리.
+   - 클라이언트와 서버는 각자의 기술을 사용해서 독립적으로 구현되고 배포될 수 있다.
+2. Uniform Interface
+- 웹을 구성하는 클라이언트, 서버, 네트워크 등의 매체 간 인터페이스는 각 인터페잇의 일관성에 기반한다. 
+   1. 리소스 식별
+   2. 표현을 통한 리소스 처리
+      - 클라이언트는 리소스 표현을 처리한다. 
+      - 식별자나 리소스 자체는 변경되지 않지만, 상호작용의 방법으로 표현될 수 있다. (예: HTML, JSON)
+   3. Self-descriptive messages
+   4. HATEOAS
+      - 리소스의 상태 표현은 리소스의 링크를 포함한다 -> 변경에 대해서 깨지지 않는다. 
+3. Layered System
+   - proxy, gateway 같은 네트워크 중간 매체를 사용할 수 있다.
+4. Cache
+5. Stateless
+   - 서버가 클라이언트의 상태를 관리할 필요가 없다. 상태 관리는 클라이언트에서 직접 한다. 
+6. Code-on-demand (optional)
+   - 스크립트나 플러그인 같은 실행 가능한 프로그램을 일시적으로 클라이언트에 전송하여, 클라이언트가 실행될 수 있도록 한다. 
+
+## REST
+로이필딩의 논문에 REST 관련 챕터가 있다.
+- https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm 
+- https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+
+REST
+- Representational State Transfer
+- 아키텍처 스타일
+
+REST API
+- REST 구조 스타일을 적용한 Web API.
+
+'RESTful' 하다
+- REST API를 제공하는 웹 서비스를 'RESTful'하다고 할 수 있다. 
+
+
 # URI 식별자 설계
+URI(Uniform Resource Identifier)
+
 ## URI 형태
+### 규칙
+RFC 3986: https://www.rfc-editor.org/rfc/rfc3986.txt
+
 슬래시 구분자(/)는 계층 관계를 나타내는 데 사용한다
 
 URI 마지막 문자로 슬래시(/)를 포함하지 않는다
@@ -11,6 +57,7 @@ URI 마지막 문자로 슬래시(/)를 포함하지 않는다
 - 예: http://api.example.restapi.org/blogs/mark-masse/entries/this-is-my-first-post
 
 밑줄(_)은 URI에 사용하지 않는다
+- 가독성 문제
 
 URI 경로에는 소문자가 적합하다
 - RFC3986에서는 URI 스키마와 호스트를 제외하고는 대소문자를 구별하도록 규정한다.
@@ -22,6 +69,9 @@ URI 경로에는 소문자가 적합하다
    - 3은 대문자가 섞여있기 때문에 1, 2와는 다른 URI이다
 
 파일 확장자는 URI에 포함시키지 않는다
+- Header의 Content-Type을 통해서 Body의 내용을 어떻게 할지 정한다. 
+
+## 권한 설계
 
 ## 리소스 원형
 도큐먼트
