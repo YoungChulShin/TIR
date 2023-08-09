@@ -1,6 +1,10 @@
 # OAuth2가 작동하는 방법
 ## OAuth2 프레임워크
 OAuth2를 권한부여 프레임워크라고 부르기도 한다. 라이브러리는 아니면 프레임워크이다. 
+- 엔티티가 사용자 대신 리소스에 접근할 수 있게 하는 방법을 기술한다. 
+
+Grant
+- 애플리케이션이 엑세스 토큰을 얻기 위해 사용할 수 있는 다양한 흐름을 그랜트라고 한다. 
 
 Basic 인증의 문제점
 - 모든 요청에 자격 증명을 보내야한다. 
@@ -102,3 +106,6 @@ Access token
 Refresh Token
 - 권한 부여 서버는 토큰이 만료되었을 때 재인증할 필요를 없애기 위해서 액세스 토큰과는 값과 용도가 다른 갱신 토큰을 발행할 수 있다. 
 - 앱은 갱신 토큰으로 재인증 없이 새 액세스 토큰을 얻을 수 있다. 
+
+## SSO(Single Sign-On) 애플리케이션 구현
+코드: https://github.com/YoungChulShin/book-spring-security-in-action/tree/master/ch12-ex1-sso
