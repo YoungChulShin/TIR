@@ -87,7 +87,13 @@ grant_type
 ### refresh_token grant
 프로세스
 ![12-9](/Images/스프링시큐티리인액션/12-9.jpg)
-- 
+1. 엑세스 토큰을 전달했지만 리소스서버에서 403 응답을 받는다. 
+2. 권한 부여 서버에 refresh 토큰을 전달하고, 새로운 엑세스 토큰과 리프레스 토큰을 전달 받는다. 
+   - grant_type: refresh_token
+   - refresh_token
+   - client_id, client_secret
+   - scope
+3. 리소스 서버에 새로운 엑세스 토큰으로 요청한다.
 
 Access token
 - OAuth2의 결과는 grant라고 부르는 엑세스 토큰을 획득하는 것이지만, 특정 토큰의 구현을 가정하지는 않는다. 
