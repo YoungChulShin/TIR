@@ -71,7 +71,20 @@ URI 경로에는 소문자가 적합하다
 파일 확장자는 URI에 포함시키지 않는다
 - Header의 Content-Type을 통해서 Body의 내용을 어떻게 할지 정한다. 
 
-## 권한 설계
+## 리소스 모델링
+URI 경로는 REST API의 리소스 모델을 다루는데, '/'로 구분한다. 이 경로 구문은 리소스 모델 계층에서 유일한 리소스에 해당한다. 
+
+아래의 경로를 보자
+```
+http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet
+```
+위 경로를 보면 아래의 자체 리소스 주소를 가진 URI들이 있다는 것을 뜻한다
+```
+http://api.soccer.restapi.org/leagues/seattle/teams
+http://api.soccer.restapi.org/leagues/seattle
+http://api.soccer.restapi.org/leagues
+http://api.soccer.restapi.org
+```
 
 ## 리소스 원형
 도큐먼트
@@ -89,8 +102,8 @@ URI 경로에는 소문자가 적합하다
    - http://api.soccer.restapi.org/leagues/seattle/teams
    - http://api.soccer.restapi.org/leagues/seattle/teams/trebuchet/players
 
-스토어 (p.19)
-- _개념이 잘 이해가 안되어서 정리 pass_
+스토어
+- 클라이언트에서 관리하는 리소스 저장소. API 클라이언트가 리소스를 넣거나 빼는 것을 관리한다.
 
 __컨트롤러__
 - 절차적인 개념을 모델링한 것. 실행가능한 함수와 같아서 입력 값과 반환 값이 있다.
@@ -117,7 +130,11 @@ __CRUD 기능을 나타내는 것은 URI에 사용하지 않는다__
 
 ## URI Query 디자인
 특징
-- RFC 3869에서 URI 쿼리는 선택 사항이고, 다른 선택사항인 프래그먼트 사이에 온다
+- RFC 3869에서 URI 쿼리는 선택 사항이고, 다른 선택사항인 프래그먼트 사이에 온다.
+   ```
+   URI = scheme "://" authority "/" path ["?" query]["#" fragment]
+   ```
+- 계층적으로 식별된 리소스의 변형이나 파생으로 해석할 수 있다.
 - 클라이언트에 검색이나 필터링 같은 추가적인 상호작용 능력을 제공한다. 
 - URI의 쿼리 유무에 따라 캐시의 작용이나 기능이 바뀌어서는 안된다.
 
@@ -141,7 +158,7 @@ GET 메서드는 리소스의 상태 표현을 얻는 데 사용해야 한다
 - 클라이언트에서는 리소스의 존재 여부 또는 메타 데이터만 확인하고 싶을 때 사용한다.
 
 PUT 메서드는 리소스를 삽입하거나 저장된 리소스를 갱신하는 데 사용해야한다. 
-- PUT 메서지에는 클라이언트에서 저장하려는 리소스를 표현하는 부분이 포함되어야 한다. 그 응답이 GET 요청을 통해서 받는 것과 같을 수도 있고 다를 수도 있다.
+- PUT 메시지는 클라이언트에서 저장하려는 리소스를 표현하는 부분이 포함되어야 한다. 그 응답이 GET 요청을 통해서 받는 것과 같을 수도 있고 다를 수도 있다.
 
 POST 메서드는 컬렉션에 새로운 리소스를 만드는 데 사용해야 한다.
 
