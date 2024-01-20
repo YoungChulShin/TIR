@@ -1,13 +1,11 @@
 # Today I Read
 매일 읽은 책을 기록하고 목록을 관리합니다
 
-## 읽고 있는 책
-- 육각형 개발자 (2023.08 ~)
-- 스프링 시큐리티 인 액션 (2023.07 ~)
-- 자바 최적화 (2023.06 ~)
-- 객체지향의 사실과 오해 (2023.07 ~)
-
 ## 읽은 책
+2024
+- 스태프 엔지니어 (2024.01)
+- 미래는 저녁 8시에 결정된다 (2024.01)
+
 2023
 - [RealMySQL](https://github.com/YoungChulShin/book-real-mysql) (2023.02)
 - [쿠버네티스 개발 전략](https://github.com/YoungChulShin/book_k8s_dev_strategy) (2023.03)
